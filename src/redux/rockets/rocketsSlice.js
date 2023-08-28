@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  rockets: ["rockets"], 
+  rockets: ['rockets'],
   isLoading: false,
 };
 
