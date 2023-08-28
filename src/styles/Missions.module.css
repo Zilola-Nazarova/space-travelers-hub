@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.missions_page,
+.missions_page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.missions_page {
+  display: flex;
+  flex: 2;
+}
+
+.loading {
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+}
+
+.error {
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+}
+
+.missions {
+  color: #363636;
+  margin: 2rem 5%;
+  table-layout: fixed;
+  border: 2px solid #dadada;
+  border-collapse: collapse;
+}
+
+.missions * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.missions_page th,
+.missions_page td {
+  border: 2px solid #dadada;
+  padding: 1rem 0.5rem;
+}
+
+.missions_page th {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: left;
+  border-bottom-width: 3px;
+}
+
+.name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.join_mission {
+  background-color: transparent;
+  font-size: 1rem;
+  width: 115px;
+  padding: 0.5rem 0.5rem;
+  color: #363636;
+  text-transform: capitalize;
+  border: 1px solid #363636;
+  border-radius: 4px;
+}
+
+.join_mission:hover {
+  font-weight: 700;
+  cursor: pointer;
+  outline: #363636 1px solid;
+}
+
+.is_member {
+  background-color: #6e6e6e;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.description {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  line-height: 1.2rem;
+}
+
+th:nth-child(1) {
+  width: 15%;
+}
+
+th:nth-child(2) {
+  width: 50%;
+}
+
+th:nth-child(3) {
+  width: 11%;
+}
+
+th:nth-child(4) {
+  width: 14%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ececec;
+}
+
+td:nth-child(3) {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+td:nth-child(4) {
+  text-align: center;
+}
