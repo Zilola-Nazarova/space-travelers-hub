@@ -1,25 +1,25 @@
 .image {
-    width: 350px;
-    height: 250px;
+  width: 350px;
+  height: 250px;
 }
 
 .rocket {
-    display: flex;
-    margin: 20px;
-    gap: 20px;
-    padding: 10px 50px;
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  padding: 10px 50px;
 }
 
 .rocket h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .description {
-    line-height: 24px;
+  line-height: 24px;
 }
 
 .reserved {
-  background-color: #68C1D0;
+  background-color: #68c1d0;
   color: white;
   margin-right: 5px;
   border-radius: 5px;
@@ -28,26 +28,26 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.reserve-rocket{
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    color: #fff;
-    font-size: 1rem;
-    font-family: Arial,  sans-serif;
+.reserve-rocket {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
 }
 
 .cancel-reserve {
-    background-color: #fff;
-    border: 1px solid #CDD0d2;
-    border-radius: 5px;
-    padding: 10px;
-    color: #b9bdbf;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  border: 1px solid #cdd0d2;
+  border-radius: 5px;
+  padding: 10px;
+  color: #b9bdbf;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
-    margin-top: 20px;
+  margin-top: 20px;
 }
