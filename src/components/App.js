@@ -23,16 +23,14 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Rockets />} />
-          <Route path="missions" element={<MissionsPage />} />
-          <Route path="profile" element={<MyProfile />} />
-          <Route path="*" element={<NotMatch />} />
-        </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Rockets />} />
+        <Route path="missions" element={<MissionsPage />} />
+        <Route path="profile" element={<MyProfile />} />
+        <Route path="*" element={<NotMatch />} />
+      </Route>
+    </Routes>
   );
 }
 
