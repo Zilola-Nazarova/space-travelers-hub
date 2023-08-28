@@ -5,14 +5,16 @@ const initialState = {
   isLoading: false,
 };
 
+const url = 'https://api.spacexdata.com/v4/rockets';
+
 export const fetchRockets = createAsyncThunk(
   'rockets/fetchRockets',
   async (_, thunkAPI) => {
     try {
-      const response = await fetch('https://api.spacexdata.com/v4/rockets');
+      const response = await fetch(url);
       return response.json();
     } catch (error) {
-      return thunkAPI.rejectWithValue('Something went wrong');
+      return thunkAPI.rejectWithValue('Something went wrong with your request');
     }
   },
 );
@@ -20,7 +22,6 @@ export const fetchRockets = createAsyncThunk(
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchRockets.pending, (state) => {
