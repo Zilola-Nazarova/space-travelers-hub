@@ -1,14 +1,15 @@
 import { useSelector } from 'react-redux';
+import styles from '../styles/Missions.module.css';
 
 const Missions = () => {
   const { missions, isLoading, error } = useSelector((store) => store.missions);
 
   if (isLoading) {
-    return <p>The books list is loading!</p>;
+    return <p className={styles.loading}>The missions list is loading!</p>;
   }
   if (error) {
     return (
-      <p>
+      <p className={styles.error}>
         Something went wrong!
         <br />
         { error }
@@ -17,7 +18,35 @@ const Missions = () => {
   }
   if (missions.length !== 0) {
     return (
-      <p>{JSON.stringify(missions)}</p>
+      <table className={styles.missions}>
+        <thead>
+          <tr>
+            <th>Misson</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((item) => (
+            <tr key={item.mission_id}>
+              <td className={styles.name}>{item.mission_name}</td>
+              <td className={styles.description}>{item.description}</td>
+              <td>
+                <span className={styles.is_member}>not a member</span>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  className={styles.join_mission}
+                >
+                  join mission
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     );
   }
   return <p>There are no missions available.</p>;
