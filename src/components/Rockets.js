@@ -1,7 +1,13 @@
-const Rockets = () => (
-  <div>
-    <p>ROCKETS!</p>
-  </div>
-);
+import React from 'react'
+import { useSelector } from 'react-redux'
 
-export default Rockets;
+function Rockets() {
+  const { rockets } = useSelector((store)=>store.rockets)
+  return (
+    <div>
+      <h1>Rockets- {rockets}</h1>
+    </div>
+  )
+}
+
+export default Rockets
