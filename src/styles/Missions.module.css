@@ -58,7 +58,7 @@
 .join_mission {
   background-color: transparent;
   font-size: 1rem;
-  width: 115px;
+  width: 125px;
   padding: 0.5rem 0.5rem;
   color: #363636;
   text-transform: capitalize;
@@ -72,16 +72,31 @@
   outline: #363636 1px solid;
 }
 
-.is_member {
-  background-color: #6e6e6e;
-  padding: 0.2rem 0.4rem;
+.is_member,
+.not_member {
+  display: block;
+  width: 120px;
+  height: 25px;
+  text-align: center;
+  margin: auto;
+  line-height: 25px;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.6px;
   color: white;
-  text-transform: uppercase;
   border-radius: 4px;
   white-space: nowrap;
+}
+
+.not_member {
+  text-transform: uppercase;
+  background-color: #6e6e6e;
+}
+
+.is_member {
+  text-transform: capitalize;
+  background-color: #0c9aad;
+  font-size: 0.9rem;
 }
 
 .description {

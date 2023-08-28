@@ -10,7 +10,7 @@ const Missions = () => {
     borderColor: '#ea0000',
     outlineColor: '#ea0000',
   };
-  
+
   if (isLoading) {
     return <p className={styles.loading}>The missions list is loading!</p>;
   }
