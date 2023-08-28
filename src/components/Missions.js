@@ -5,7 +5,12 @@ import { joinMission } from '../redux/missions/missionsSlice';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions, isLoading, error } = useSelector((store) => store.missions);
-
+  const redColored = {
+    color: '#ea0000',
+    borderColor: '#ea0000',
+    outlineColor: '#ea0000',
+  };
+  
   if (isLoading) {
     return <p className={styles.loading}>The missions list is loading!</p>;
   }
