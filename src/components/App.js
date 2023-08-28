@@ -3,22 +3,24 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
-
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-
-import { getMissions } from '../redux/missions/missionsSlice';
 import MyProfile from './MyProfile';
 import NotMatch from './NotMatch';
 import Layout from './Layout';
 import MissionsPage from '../routes/MissionsPage';
 import Rockets from './Rockets';
+
+import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import { getMissions } from '../redux/missions/missionsSlice';
 import '../styles/App.css';
 
-const App = () => {
+function App() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getMissions());
+    dispatch(fetchRockets());
   }, [dispatch]);
 
   return (
@@ -31,6 +33,6 @@ const App = () => {
       </Route>
     </Routes>
   );
-};
+}
 
 export default App;
