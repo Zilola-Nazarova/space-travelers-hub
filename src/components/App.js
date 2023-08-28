@@ -11,7 +11,7 @@ import Layout from './Layout';
 import Missions from './Missions';
 import Rockets from './Rockets';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
-import { getMissions } from './../redux/missions/missionsSlice';
+import { getMissions } from '../redux/missions/missionsSlice';
 
 function App() {
   const dispatch = useDispatch();
