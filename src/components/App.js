@@ -11,8 +11,9 @@ import { getMissions } from '../redux/missions/missionsSlice';
 import MyProfile from './MyProfile';
 import NotMatch from './NotMatch';
 import Layout from './Layout';
-import Missions from './Missions';
+import MissionsPage from '../routes/MissionsPage';
 import Rockets from './Rockets';
+import '../styles/App.css';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Rockets />} />
-        <Route path="missions" element={<Missions />} />
+        <Route path="missions" element={<MissionsPage />} />
         <Route path="profile" element={<MyProfile />} />
         <Route path="*" element={<NotMatch />} />
       </Route>
