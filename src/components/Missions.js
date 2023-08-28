@@ -1,7 +1,9 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import styles from '../styles/Missions.module.css';
+import { joinMission } from '../redux/missions/missionsSlice';
 
 const Missions = () => {
+  const dispatch = useDispatch();
   const { missions, isLoading, error } = useSelector((store) => store.missions);
 
   if (isLoading) {
@@ -39,6 +41,7 @@ const Missions = () => {
                 <button
                   type="button"
                   className={styles.join_mission}
+                  onClick={() => dispatch(joinMission(item.mission_id))}
                 >
                   join mission
                 </button>
