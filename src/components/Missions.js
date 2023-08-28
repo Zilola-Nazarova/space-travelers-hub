@@ -1,14 +1,26 @@
 import { useSelector } from 'react-redux';
 
 const Missions = () => {
-  const { content } = useSelector((store) => store.missions);
+  const { missions, isLoading, error } = useSelector((store) => store.missions);
 
-  return (
-    <div>
-      <p>This is Missions Page!</p>
-      {content}
-    </div>
-  );
+  if (isLoading) {
+    return <p>The books list is loading!</p>;
+  }
+  if (error) {
+    return (
+      <p>
+        Something went wrong!
+        <br />
+        { error }
+      </p>
+    );
+  }
+  if (missions.length !== 0) {
+    return (
+      <p>{JSON.stringify(missions)}</p>
+    );
+  }
+  return <p>There are no missions available.</p>;
 };
 
 export default Missions;
