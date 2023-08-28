@@ -30,7 +30,7 @@ export const missionsSlice = createSlice({
         if (mission.mission_id !== action.payload) {
           return mission;
         }
-        return { ...mission, is_member: true };
+        return { ...mission, reserved: true };
       });
       state.missions = newMissionsState;
     },
