@@ -154,7 +154,7 @@ Your app is ready to be deployed!
 - Twitter: [@NazarovaZi](https://twitter.com/NazarovaZi)
 - LinkedIn: [in/NazarovaZi](https://www.linkedin.com/in/NazarovaZi)
 
-👤 Zilola Nazarova
+👤 Lawmsangi Varte
 
 - GitHub: [@Lawmsangi](https://github.com/Lawmsangi)
 - Twitter: [@lawmsangi](https://twitter.com/mamy_22_zayn)
