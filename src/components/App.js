@@ -8,10 +8,11 @@ import { useDispatch } from 'react-redux';
 import MyProfile from './MyProfile';
 import NotMatch from './NotMatch';
 import Layout from './Layout';
-import Missions from './Missions';
+import MissionsPage from '../routes/MissionsPage';
 import Rockets from './Rockets';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
 import { getMissions } from '../redux/missions/missionsSlice';
+import '../styles/App.css';
 
 function App() {
   const dispatch = useDispatch();
@@ -22,16 +23,14 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Rockets />} />
-          <Route path="missions" element={<Missions />} />
-          <Route path="profile" element={<MyProfile />} />
-          <Route path="*" element={<NotMatch />} />
-        </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Rockets />} />
+        <Route path="missions" element={<MissionsPage />} />
+        <Route path="profile" element={<MyProfile />} />
+        <Route path="*" element={<NotMatch />} />
+      </Route>
+    </Routes>
   );
 }
 
