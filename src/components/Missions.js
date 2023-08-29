@@ -5,6 +5,11 @@ import { joinMission } from '../redux/missions/missionsSlice';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions, isLoading, error } = useSelector((store) => store.missions);
+  const redColored = {
+    color: '#ea0000',
+    borderColor: '#ea0000',
+    outlineColor: '#ea0000',
+  };
 
   if (isLoading) {
     return <p className={styles.loading}>The missions list is loading!</p>;
@@ -35,15 +40,20 @@ const Missions = () => {
               <td className={styles.name}>{item.mission_name}</td>
               <td className={styles.description}>{item.description}</td>
               <td>
-                <span className={styles.is_member}>not a member</span>
+                {item.reserved ? (
+                  <span className={styles.is_member}>active member</span>
+                ) : (<span className={styles.not_member}>not a member</span>)}
               </td>
               <td>
                 <button
                   type="button"
                   className={styles.join_mission}
+                  style={item.reserved ? redColored : null}
                   onClick={() => dispatch(joinMission(item.mission_id))}
                 >
-                  join mission
+                  {item.reserved ? (
+                    'leave mission'
+                  ) : ('join mission')}
                 </button>
               </td>
             </tr>
