@@ -1,8 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import '../styles/Rockets.css';
+import { cancelReservation, reserveRocket } from '../redux/rockets/rocketsSlice';
 
 function Rockets() {
+  const dispatch = useDispatch();
   const { rockets, isLoading } = useSelector((store) => store.rockets);
 
   if (isLoading) {
@@ -20,15 +22,32 @@ function Rockets() {
           <div className="rocket-details">
             <h2>{rocket.name}</h2>
             <div className="details">
+              {rocket.reserved ? (
+                <span className="reserved">Reserved</span>
+              ) : (
+                ''
+              )}
               <span className="description">{rocket.description}</span>
             </div>
 
-            <button
-              className="reserve-rocket"
-              type="button"
-            >
-              Reserve Rocket
-            </button>
+            {rocket.reserved && (
+              <button
+                type="button"
+                className="cancel-reserve"
+                onClick={() => dispatch(cancelReservation(rocket.id))}
+              >
+                Cancel Reservation
+              </button>
+            )}
+            {!rocket.reserved && (
+              <button
+                type="button"
+                className="reserve-rocket"
+                onClick={() => dispatch(reserveRocket(rocket.id))}
+              >
+                Reserve Rocket
+              </button>
+            )}
           </div>
         </div>
       ))}
