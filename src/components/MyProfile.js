@@ -3,6 +3,7 @@ import styles from '../styles/MyProfile.module.css';
 
 const MyProfile = () => {
   const { missions } = useSelector((store) => store.missions);
+  const { rockets } = useSelector((store) => store.rockets);
 
   return (
     <div className={styles.profile_page}>
@@ -15,8 +16,14 @@ const MyProfile = () => {
             ))}
         </ul>
       </div>
-      <div className={styles.my_rockets}>
+      <div className={styles.my_missions}>
         <h2>My Rockets</h2>
+        <ul>
+          {rockets.filter((rocket) => rocket.reserved === true)
+            .map((rocket) => (
+              <li key={rocket.rocket_id}>{rocket.name}</li>
+            ))}
+        </ul>
       </div>
     </div>
   );
