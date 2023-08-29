@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.profile_page {
+  padding: 2rem 5%;
+  display: flex;
+  gap: 5%;
+  flex: 2;
+}
+
+.my_missions {
+  flex: 2;
+}
+
+.my_missions * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.my_missions h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4px;
+}
+
+.my_missions ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.my_missions ul li {
+  padding: 0.5rem 1rem 1.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.my_missions ul li:last-child {
+  border-bottom: none;
+}
+
+.my_rockets {
+  background-color: aquamarine;
+  flex: 2;
+}
